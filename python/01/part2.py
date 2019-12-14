@@ -11,7 +11,7 @@ def fuel_required(mass):
 
 total_fuel = 0
 
-with open("input.txt") as f:
+with open("input/01.txt") as f:
     for line in f:
         if line.rstrip() != "":
             total_fuel += fuel_required(int(line))
