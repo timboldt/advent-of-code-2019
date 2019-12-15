@@ -38,7 +38,7 @@ pub fn part1(input: &[usize]) -> usize {
 //     masses.iter().map(|m| part2_fuel(*m)).sum()
 // }
 
-pub fn run_op(op_index: usize, program: &mut [usize]) {}
+// pub fn run_op(op_index: usize, program: &mut [usize]) {}
 
 #[cfg(test)]
 mod tests {

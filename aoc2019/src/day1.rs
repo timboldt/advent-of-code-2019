@@ -1,5 +1,4 @@
 use aoc_runner_derive::{aoc, aoc_generator};
-use std::num::ParseIntError;
 
 #[aoc_generator(day1)]
 fn input_generator(input: &str) -> Vec<i32> {
