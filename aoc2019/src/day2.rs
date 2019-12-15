@@ -8,6 +8,8 @@ fn input_generator(input: &str) -> Vec<usize> {
 #[aoc(day2, part1)]
 pub fn part1(input: &[usize]) -> usize {
     let mut program = input.to_vec();
+    program[1] = 12;
+    program[2] = 2;
     let mut mem_ptr = 0;
     loop {
         let op = program[mem_ptr];
