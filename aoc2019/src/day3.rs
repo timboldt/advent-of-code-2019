@@ -23,9 +23,9 @@ impl FromStr for WireSegment {
     type Err = ParseIntError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        let mut op_str = String::from(s);
-        let dist_str = op_str.split_off(1);
-        let dir = match op_str.chars().next().unwrap_or('*') {
+        let mut dir_str = String::from(s);
+        let dist_str = dir_str.split_off(1);
+        let dir = match dir_str.chars().next().unwrap_or('*') {
             'U' => Direction::Up,
             'D' => Direction::Down,
             'L' => Direction::Left,
@@ -76,29 +76,29 @@ mod tests {
     #[test]
     fn parsing() {
         assert_eq!(
-            Op::from_str("U99").unwrap(),
-            Op {
+            WireSegment::from_str("U99").unwrap(),
+            WireSegment {
                 direction: Direction::Up,
                 distance: 99
             }
         );
         assert_eq!(
-            Op::from_str("D1").unwrap(),
-            Op {
+            WireSegment::from_str("D1").unwrap(),
+            WireSegment {
                 direction: Direction::Down,
                 distance: 1
             }
         );
         assert_eq!(
-            Op::from_str("L12345").unwrap(),
-            Op {
+            WireSegment::from_str("L12345").unwrap(),
+            WireSegment {
                 direction: Direction::Left,
                 distance: 12345
             }
         );
         assert_eq!(
-            Op::from_str("R0").unwrap(),
-            Op {
+            WireSegment::from_str("R0").unwrap(),
+            WireSegment {
                 direction: Direction::Right,
                 distance: 0
             }
