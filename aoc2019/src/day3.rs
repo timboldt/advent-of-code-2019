@@ -97,10 +97,6 @@ pub fn part1(input: &str) -> usize {
     manhattan(closest)
 }
 
-// #[aoc(day3, part2)]
-// pub fn part2(input: &[usize]) -> usize {
-// }
-
 #[cfg(test)]
 mod tests {
     use super::*;
